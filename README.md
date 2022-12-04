@@ -10,11 +10,11 @@ and a button to close the popup and revert to a given link if any.
 @returns A Modal with a message displayed and OK Button.
 
 ### Install
-Install from terminal `npm i react-plugin-modal`
+Install from terminal `npm i plugin-modal`
 
 ### How to Use
 import React, { useState } from "react";
-import Modal from "../components/Modal/Modal";
+import { Modal } from "@menallen/plugin-modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "../style/style.css";

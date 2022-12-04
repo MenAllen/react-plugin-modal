@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "../lib/Modal";
+import Modal from "../lib/components/Modal";
 
 export default function App() {
 	const messageModal = "Hello World";
