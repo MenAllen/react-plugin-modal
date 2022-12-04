@@ -1,8 +1,12 @@
 {
   "name": "@menallen/plugin-modal",
   "description": "modale parametrable",
-  "keywords": ["react", "components", "modal"],
-  "version": "0.1.1",
+  "keywords": [
+    "react",
+    "components",
+    "modal"
+  ],
+  "version": "0.1.2",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
