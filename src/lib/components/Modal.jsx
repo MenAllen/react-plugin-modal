@@ -1,10 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import propTypes from "prop-types";
 import styled from "styled-components";
-import "./Modal.css";
 
-//border-color: rgb(147, 173, 24, 0.8);
-//background-color: rgb(147, 173, 24, 0.8);
+const ModalContainer = styled.div`
+	display: ${(props) => (props.displayIt === true ? "block" : "none")};
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	padding: 0 !important;
+`;
 
 const Button = styled.button`
 	display: block;
@@ -71,7 +78,7 @@ function Modal({ display, setDisplay, message, params }) {
 	};
 
 	return (
-		<div className={display ? "modalContainer active" : "modalContainer"}>
+		<ModalContainer displayIt={display}>
 			<Overlay></Overlay>
 			<ModalInfo>
 				<Message>{message}</Message>
@@ -79,8 +86,15 @@ function Modal({ display, setDisplay, message, params }) {
 					OK
 				</Button>
 			</ModalInfo>
-		</div>
+		</ModalContainer>
 	);
 }
+
+Modal.propTypes = {
+	display: propTypes.bool.isRequired,
+	setDisplay: propTypes.func.isRequired,
+	message: propTypes.string.isRequired,
+	params: propTypes.object.isRequired,
+};
 
 export default Modal;
