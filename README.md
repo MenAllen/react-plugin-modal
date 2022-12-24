@@ -21,7 +21,7 @@ import "../style/style.css";
 
 function Error() {
 	const errorColor = '#f08d3a';
-	const errorMessage = "Error ! Requested page doesn't exist";
+	const errorMessage = "Hello WOrld !";
 	const paramsModal = {bgColor: errorColor, Color: 'white', link: "/"};
 
 	const [openModal, setOpenModal] = useState(true);
@@ -34,3 +34,11 @@ function Error() {
 		</Container>
 	)
 }
+
+### Ho to Build and Publish
+ - Perform modification then build using following command in Git Bash to update dist directory:
+ - "rm -rf dist && NODE_ENV=production ./node_modules/.bin/babel src/lib --out-dir dist --copy-files"
+ - Commit changes and push to github
+ - Update version : npm version patch
+ - Publish npm package : npm publish --access public
+
